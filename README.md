@@ -1,2 +1,2 @@
-# Attempt2.0
+# GroupProjectPrototype
 Created with CodeSandbox
