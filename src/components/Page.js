@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 // import Navbar from "./NavBar";
 // import Graph from "./Graph";
@@ -70,6 +70,7 @@ function Page({ props, offset, color }) {
         offset={offset}
         speed={1.2}
         style={{ marginTop: "200px", marginLeft: "-150px" }}
+        onClick={() => parallax.current.scrollTo(1)}
       >
         <button className="button">
           {/* Bronx Button */}
@@ -81,6 +82,7 @@ function Page({ props, offset, color }) {
         offset={offset}
         speed={1.35}
         style={{ marginTop: "200px" }}
+        onClick={() => parallax.current.scrollTo(2)}
       >
         <button className="button">
           {/* Manhattan Button */}
@@ -92,6 +94,7 @@ function Page({ props, offset, color }) {
         offset={offset}
         speed={1.4}
         style={{ marginTop: "200px", marginLeft: "150px" }}
+        onClick={() => parallax.current.scrollTo(3)}
       >
         <button className="button">
           {/* Brooklyn Button */}
@@ -99,7 +102,7 @@ function Page({ props, offset, color }) {
         </button>
       </ParallaxLayer>
 
-      <ParallaxLayer
+      {/* <ParallaxLayer
         offset={offset}
         speed={1.4}
         style={{ marginTop: "200px", marginLeft: "150px", marginTop: "-0px" }}
@@ -107,7 +110,7 @@ function Page({ props, offset, color }) {
         <div>
           <Search />
         </div>
-      </ParallaxLayer>
+      </ParallaxLayer> */}
 
       {/* 
       <ParallaxLayer

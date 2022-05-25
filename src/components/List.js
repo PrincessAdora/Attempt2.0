@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import data from "./ListData.js";
+
 
 function List(props) {
   //create a new array by filtering the original array
@@ -10,6 +10,9 @@ function List(props) {
     }
     //return the item which contains the user input
     else {
+      if(!el.dba){
+        return;
+      }
       console.log(el.dba);
       return el.dba.toLowerCase().includes(props.input);
     }

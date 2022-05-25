@@ -60,12 +60,11 @@ class App extends Component {
   // Code your API request here
   componentDidMount = () => {
     fetch(
-      "https://data.cityofnewyork.us/resource/43nn-pn8j.json?$$app_token=Ee7bibJxma3jcUJjogz19BnXK"
+      "https://data.cityofnewyork.us/resource/43nn-pn8j.json?$$app_token=Ee7bibJxma3jcUJjogz19BnXK&$limit=40"
     )
       .then((response) => response.json())
       .then((data) => {
         this.setState({ data: data });
-        console.log(this.state.data);
       })
       .catch((e) => {
         console.log(e);

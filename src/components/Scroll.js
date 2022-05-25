@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import Page from "./Page.js";
 import "../styles.css";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 
 function Scroll() {
+  // const parallax = useRef<IParallax>(!null) /*Having issues*/
   return (
-    <Parallax pages={4} className="container" horizontal>
+    <Parallax ref={parallax} pages={4} className="container" horizontal>
       <Page offset={0} color="light" />
       <Page offset={1} color="mid" />
       <Page offset={2} color="dark" />
