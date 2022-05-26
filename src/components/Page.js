@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 // import Navbar from "./NavBar";
 // import Graph from "./Graph";
 import Bronx from "../images/bronx.png";
@@ -9,6 +9,7 @@ import Search from "../search";
 import styles from "../styles.css";
 
 function Page({ props, offset, color }) {
+  const parallax = useRef(null);
   return (
     <>
       {/* Set offset to a specific number if you only want that layer to show on one page,
@@ -68,6 +69,7 @@ function Page({ props, offset, color }) {
 
       <ParallaxLayer
         offset={offset}
+        ref={parallax}
         speed={1.2}
         style={{ marginTop: "200px", marginLeft: "-150px" }}
         onClick={() => parallax.current.scrollTo(1)}
@@ -80,6 +82,7 @@ function Page({ props, offset, color }) {
 
       <ParallaxLayer
         offset={offset}
+        ref={parallax}
         speed={1.35}
         style={{ marginTop: "200px" }}
         onClick={() => parallax.current.scrollTo(2)}
@@ -92,6 +95,7 @@ function Page({ props, offset, color }) {
 
       <ParallaxLayer
         offset={offset}
+        ref={parallax}
         speed={1.4}
         style={{ marginTop: "200px", marginLeft: "150px" }}
         onClick={() => parallax.current.scrollTo(3)}
