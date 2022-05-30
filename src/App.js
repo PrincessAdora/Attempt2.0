@@ -1,12 +1,19 @@
 import styles from "./styles.css";
 import React, { Component } from "react";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import {
+  Parallax,
+  ParallaxLayer,
+  IParallax,
+  useSpring
+} from "@react-spring/parallax";
 import { BubbleChart } from "reaviz";
 import Navbar from "./components/NavBar";
 import Footer from "./components/footer";
-import Scroll from "./components/Scroll";
+// import Scroll from "./components/Scroll";
+import Page from "./components/Page";
 import { render } from "react-dom";
 import { useState } from "react";
+import Graph from "./components/Graph";
 import Search from "./search";
 //import Resturant from "./components/Resturant";
 import search from "./search.css";
@@ -53,7 +60,8 @@ class App extends Component {
     super(props);
     this.state = {
       // Add data state here
-      data: []
+      data: [],
+      dataIsLoaded: false
     };
   }
 
@@ -64,7 +72,10 @@ class App extends Component {
     )
       .then((response) => response.json())
       .then((data) => {
-        this.setState({ data: data });
+        this.setState({
+          data: data,
+          dataIsLoaded: true
+        });
       })
       .catch((e) => {
         console.log(e);
@@ -79,9 +90,43 @@ class App extends Component {
   };
 
   render() {
+    const { dataIsLoaded, data } = this.state;
+
     return (
       <div>
-        <Scroll data={this.state.data} />
+        <Parallax pages={4} className="container" horizontal>
+          <Page offset={0} color="light" />
+          <Page offset={1} color="mid" />
+          <Page offset={2} color="dark" />
+          <Page offset={3} color="darker" />
+
+          <ParallaxLayer
+            offset={1}
+            speed={1.4}
+            style={{ marginTop: "-100px", marginLeft: "150px" }}
+          >
+            <Graph
+              data={data.map((application) => (
+                <li>
+                  zipcode = {application.zipcode}, borough = {application.boro}
+                </li>
+              ))}
+            />
+          </ParallaxLayer>
+
+          {/* <Page offset={2} color="purple" />
+      <Page offset={3} color="pink" /> */}
+        </Parallax>
+
+        {/* <Scroll
+          data={this.state.data}
+          RestaurantData={this.state.data.map((application) => (
+            <li>
+              {application.dba}:{application.zipcode}:{application.grade}:
+              {application.cuisine_description}
+            </li>
+          ))}
+        /> */}
         {/* RESTAURANT DATA IS BELOW*/}
         <section className="list">
           {/* {this.state.data.map((application) => (

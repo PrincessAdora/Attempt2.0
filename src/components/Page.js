@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+import { VictoryChart, VictoryHistogram } from "victory";
 // import Navbar from "./NavBar";
-// import Graph from "./Graph";
 import Bronx from "../images/bronx.png";
 import Manhattan from "../images/manhattan.png";
 import Brooklyn from "../images/bridge.png";
 import Search from "../search";
+import Graph from "./Graph";
 import styles from "../styles.css";
 
 function Page({ props, offset, color }) {
@@ -116,13 +117,13 @@ function Page({ props, offset, color }) {
         </div>
       </ParallaxLayer> */}
 
-      {/* 
-      <ParallaxLayer
+      {/* <ParallaxLayer
         offset={offset}
         speed={1.4}
         style={{ marginTop: "200px", marginLeft: "150px" }}
+ 
       >
-        <Graph data={props.data} />
+        <Graph data={props.RestaurantData} />
       </ParallaxLayer> */}
     </>
   );
