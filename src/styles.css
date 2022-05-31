@@ -52,16 +52,34 @@ body {
   cursor: pointer;
 }
 
-/* .text {
+.text {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: left;
-  font-family: "Arial", sans-serif;
-  font-size: 30px;
+  font-family: "Concert One", cursive;
+  font-size: 50px;
   color: #626262;
-  font-weight: 700;
-} */
+  font-weight: 900;
+}
+
+.par {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-family: "Concert One", cursive;
+  font-size: 20px;
+  color: #626262;
+  font-weight: 900;
+}
+
+.arrow {
+  font-family: "Concert One", cursive;
+  font-size: 80px;
+  color: #626262;
+  font-weight: 900;
+}
 
 .light {
   background: linear-gradient(to right, #fffde4, #7bc6cc);
@@ -91,6 +109,24 @@ body {
   border: none;
   outline: none;
   font-weight: 700;
+}
+
+.card-scroll {
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  height: 100vh;
+}
+
+.ind {
+  margin: 15px;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+.card-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .icon1 {

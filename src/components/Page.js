@@ -46,11 +46,11 @@ function Page({ props, offset, color }) {
         <div className={`shape ${color}`} />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={offset} speed={1.7} style={{ marginTop: "100px" }}>
+      {/* <ParallaxLayer offset={offset} speed={1.7} style={{ marginTop: "100px" }}>
         <img src={Bronx} width="100" height="100" alt="" className="icon1" />
-      </ParallaxLayer>
+      </ParallaxLayer> */}
 
-      <ParallaxLayer
+      {/* <ParallaxLayer
         offset={offset}
         speed={1.85}
         style={{ marginTop: "100px" }}
@@ -62,13 +62,13 @@ function Page({ props, offset, color }) {
           alt=""
           className="icon2"
         />
-      </ParallaxLayer>
+      </ParallaxLayer> */}
 
-      <ParallaxLayer offset={offset} speed={2} style={{ marginTop: "100px" }}>
+      {/* <ParallaxLayer offset={offset} speed={2} style={{ marginTop: "100px" }}>
         <img src={Brooklyn} width="100" height="100" alt="" className="icon3" />
-      </ParallaxLayer>
+      </ParallaxLayer> */}
 
-      <ParallaxLayer
+      {/* <ParallaxLayer
         offset={offset}
         ref={parallax}
         speed={1.2}
@@ -76,12 +76,11 @@ function Page({ props, offset, color }) {
         onClick={() => parallax.current.scrollTo(1)}
       >
         <button className="button">
-          {/* Bronx Button */}
           <div>BRONX</div>
         </button>
-      </ParallaxLayer>
+      </ParallaxLayer> */}
 
-      <ParallaxLayer
+      {/* <ParallaxLayer
         offset={offset}
         ref={parallax}
         speed={1.35}
@@ -89,12 +88,11 @@ function Page({ props, offset, color }) {
         onClick={() => parallax.current.scrollTo(2)}
       >
         <button className="button">
-          {/* Manhattan Button */}
           <div>MANHATTAN</div>
         </button>
-      </ParallaxLayer>
+      </ParallaxLayer> */}
 
-      <ParallaxLayer
+      {/* <ParallaxLayer
         offset={offset}
         ref={parallax}
         speed={1.4}
@@ -102,10 +100,9 @@ function Page({ props, offset, color }) {
         onClick={() => parallax.current.scrollTo(3)}
       >
         <button className="button">
-          {/* Brooklyn Button */}
           <div>BROOKLYN</div>
         </button>
-      </ParallaxLayer>
+      </ParallaxLayer> */}
 
       {/* <ParallaxLayer
         offset={offset}

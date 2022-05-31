@@ -9,14 +9,17 @@ import {
 import { BubbleChart } from "reaviz";
 import Navbar from "./components/NavBar";
 import Footer from "./components/footer";
+import IntroPage from "./components/IntroPage";
 // import Scroll from "./components/Scroll";
 import Page from "./components/Page";
 import { render } from "react-dom";
 import { useState } from "react";
 import Graph from "./components/Graph";
 import Search from "./search";
+import Cards from "./components/Cards";
+import EndPage from "./components/EndPage";
 //import Resturant from "./components/Resturant";
-import search from "./search.css";
+import "./search.css";
 
 //<a href="https://www.vecteezy.com/free-vector/city-perspective">City Perspective Vectors by Vecteezy</a>
 //<a href="https://www.vecteezy.com/free-vector/street">Street Vectors by Vecteezy</a>
@@ -94,28 +97,21 @@ class App extends Component {
 
     return (
       <div>
-        <Parallax pages={4} className="container" horizontal>
-          <Page offset={0} color="light" />
-          <Page offset={1} color="mid" />
-          <Page offset={2} color="dark" />
-          <Page offset={3} color="darker" />
+        <Parallax pages={6} className="container" horizontal>
+          <IntroPage offset={0} color="light" />
+          <Page offset={1} color="light" />
+          <Page offset={2} color="mid" />
+          <Page offset={3} color="dark" />
+          <Page offset={4} color="darker" />
+          <EndPage offset={4.99} color="light" />
 
-          <ParallaxLayer
-            offset={1}
-            speed={1.4}
-            style={{ marginTop: "-100px", marginLeft: "150px" }}
-          >
-            <Graph
-              data={data.map((application) => (
-                <li>
-                  zipcode = {application.zipcode}, borough = {application.boro}
-                </li>
+          <ParallaxLayer offset={4.99} speed={1.4}>
+            <div className="card-scroll">
+              {this.state.data.map((data) => (
+                <Cards data={data} className="ind" />
               ))}
-            />
+            </div>
           </ParallaxLayer>
-
-          {/* <Page offset={2} color="purple" />
-      <Page offset={3} color="pink" /> */}
         </Parallax>
 
         {/* <Scroll
