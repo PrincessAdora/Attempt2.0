@@ -20,14 +20,14 @@ function Cards(props) {
 
   return (
     <div>
-      <Card style={{ height: "48rem" }}>
+      <Card style={{ height: "20rem" }}>
         <CardBody>
           <CardTitle tag="h5">{props.data.dba}</CardTitle>
           <CardSubtitle className="mb-2 text-muted" tag="h6">
             {props.data.boro}
           </CardSubtitle>
           <CardText>Grade: {props.data.grade}</CardText>
-          <CardText>Complaints: {props.data.violation_description}</CardText>
+          <CardText>Status: {props.data.critical_flag}</CardText>
           <Button></Button>
         </CardBody>
       </Card>

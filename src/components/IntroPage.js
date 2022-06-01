@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, forwardRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 import { VictoryChart, VictoryHistogram } from "victory";
 import styles from "../styles.css";
@@ -8,6 +8,15 @@ import Brooklyn from "../images/bridge.png";
 
 function IntroPage({ props, offset, color }) {
   const parallax = useRef(null);
+
+  const Receiver = forwardRef((props, ref) => {
+    return <input ref={ref} {...props} />;
+  });
+
+  const handleScrollRight = () => {
+    window.scrollTo({ left: 50, behavior: "smooth" });
+  };
+
   return (
     <>
       <ParallaxLayer offset={offset} speed={1}>
@@ -57,7 +66,7 @@ function IntroPage({ props, offset, color }) {
         ref={parallax}
         speed={1.2}
         style={{ marginTop: "325px", marginLeft: "-150px" }}
-        onClick={() => parallax.current.scrollTo(1)}
+        onClick={handleScrollRight}
       >
         <button className="button">
           {/* Bronx Button */}
@@ -70,7 +79,7 @@ function IntroPage({ props, offset, color }) {
         ref={parallax}
         speed={1.25}
         style={{ marginTop: "325px" }}
-        onClick={() => parallax.current.scrollTo(2)}
+        onClick={handleScrollRight}
       >
         <button className="button">
           {/* Manhattan Button */}
@@ -83,7 +92,7 @@ function IntroPage({ props, offset, color }) {
         ref={parallax}
         speed={1.3}
         style={{ marginTop: "325px", marginLeft: "150px" }}
-        onClick={() => parallax.current.scrollTo(3)}
+        onClick={handleScrollRight}
       >
         <button className="button">
           {/* Brooklyn Button */}

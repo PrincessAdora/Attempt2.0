@@ -6,13 +6,17 @@ import Bronx from "../images/bronx.png";
 import Manhattan from "../images/manhattan.png";
 import Brooklyn from "../images/bridge.png";
 import Search from "../search";
-import Graph from "./Graph";
 import styles from "../styles.css";
 
 function Page({ props, offset, color }) {
   const parallax = useRef(null);
+
   return (
     <>
+      <ParallaxLayer offset={offset} speed={1}>
+        <div className={`shape ${color}`} />
+      </ParallaxLayer>
+
       {/* Set offset to a specific number if you only want that layer to show on one page,
     set offset to offset if you want that layer to show on every page */}
       {/* add reusable layers here as Page component*/}
@@ -41,10 +45,6 @@ function Page({ props, offset, color }) {
       >
         <Navbar />
       </ParallaxLayer> */}
-
-      <ParallaxLayer offset={offset} speed={1}>
-        <div className={`shape ${color}`} />
-      </ParallaxLayer>
 
       {/* <ParallaxLayer offset={offset} speed={1.7} style={{ marginTop: "100px" }}>
         <img src={Bronx} width="100" height="100" alt="" className="icon1" />

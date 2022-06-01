@@ -15,8 +15,6 @@ function Scroll(props) {
       <Page offset={1} color="mid" RestaurantData={props.RestaurantData} />
       <Page offset={2} color="dark" RestaurantData={props.RestaurantData} />
       <Page offset={3} color="darker" RestaurantData={props.RestaurantData} />
-      {/* <Page offset={2} color="purple" />
-      <Page offset={3} color="pink" /> */}
     </Parallax>
   );
 }
