@@ -23,6 +23,10 @@ function IntroPage({ props, offset, color }) {
         <div className={`shape ${color}`} />
       </ParallaxLayer>
 
+      <ParallaxLayer offset={offset} speed={2}>
+        <div className="background" />
+      </ParallaxLayer>
+
       <ParallaxLayer
         offset={offset}
         speed={1.7}

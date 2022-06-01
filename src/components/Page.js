@@ -17,6 +17,10 @@ function Page({ props, offset, color }) {
         <div className={`shape ${color}`} />
       </ParallaxLayer>
 
+      <ParallaxLayer offset={offset} speed={2}>
+        <div className="background" />
+      </ParallaxLayer>
+
       {/* Set offset to a specific number if you only want that layer to show on one page,
     set offset to offset if you want that layer to show on every page */}
       {/* add reusable layers here as Page component*/}
