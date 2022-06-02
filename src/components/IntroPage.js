@@ -7,6 +7,7 @@ import Manhattan from "../images/manhattan.png";
 import Brooklyn from "../images/bridge.png";
 import Queens from "../images/Queens.png";
 import StatenIsland from "../images/Ship.png";
+import arrow from "../images/arrow.png";
 
 function IntroPage({ props, offset, color }) {
   const parallax = useRef(null);
@@ -151,6 +152,27 @@ function IntroPage({ props, offset, color }) {
         <button className="button">
           {/* Brooklyn Button */}
           <div>STATEN ISLAND</div>
+        </button>
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={offset}
+        speed={1.7}
+        style={{ marginTop: "150px", marginLeft: "600px" }}
+      >
+        <img src={arrow} width="100" height="100" alt="" className="icon1" />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={offset}
+        ref={parallax}
+        speed={1.3}
+        style={{ marginTop: "250px", marginLeft: "450px" }}
+        onClick={handleScrollRight}
+      >
+        <button className="button">
+          {/* Brooklyn Button */}
+          <div>INSPECT/SEARCH</div>
         </button>
       </ParallaxLayer>
 

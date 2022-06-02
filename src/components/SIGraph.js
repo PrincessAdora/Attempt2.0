@@ -39,7 +39,7 @@ function SIGraph(props) {
 
   return (
     <div>
-      <VictoryChart domainPadding={25}>
+      <VictoryChart domainPadding={50} width={600} height={600}>
         <VictoryAxis
           // tickValues specifies both the number of ticks and where
           tickValues={[1, 2, 3]}
@@ -53,6 +53,7 @@ function SIGraph(props) {
         <VictoryBar
           style={{ data: { fill: "#F1737F" } }}
           // cornerRadius={3}
+          barRatio={0.8}
           data={app}
           x="tag"
           y="grade"
