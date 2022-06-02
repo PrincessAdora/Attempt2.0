@@ -5,6 +5,8 @@ import styles from "../styles.css";
 import Bronx from "../images/bronx.png";
 import Manhattan from "../images/manhattan.png";
 import Brooklyn from "../images/bridge.png";
+import Queens from "../images/Queens.png";
+import StatenIsland from "../images/Ship.png";
 
 function IntroPage({ props, offset, color }) {
   const parallax = useRef(null);
@@ -32,7 +34,7 @@ function IntroPage({ props, offset, color }) {
         speed={1.7}
         style={{ marginTop: "70px", marginLeft: "-150px" }}
       >
-        <div className="arrow"> ↓ </div>
+        {/* <div className="arrow"> ↓ </div> */}
       </ParallaxLayer>
 
       <ParallaxLayer offset={offset} speed={1.7} style={{ marginTop: "250px" }}>
@@ -40,7 +42,7 @@ function IntroPage({ props, offset, color }) {
       </ParallaxLayer>
 
       <ParallaxLayer offset={offset} speed={1.7} style={{ marginTop: "70px" }}>
-        <div className="arrow"> ↓ </div>
+        {/* <div className="arrow"> ↓ </div> */}
       </ParallaxLayer>
 
       <ParallaxLayer offset={offset} speed={1.7} style={{ marginTop: "250px" }}>
@@ -58,11 +60,33 @@ function IntroPage({ props, offset, color }) {
         speed={1.7}
         style={{ marginTop: "70px", marginLeft: "150px" }}
       >
-        <div className="arrow"> ↓ </div>
+        {/* <div className="arrow"> ↓ </div> */}
       </ParallaxLayer>
 
       <ParallaxLayer offset={offset} speed={1.7} style={{ marginTop: "250px" }}>
         <img src={Brooklyn} width="100" height="100" alt="" className="icon3" />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={offset}
+        speed={1.7}
+        style={{ marginTop: "50px", marginLeft: "50px" }}
+      >
+        <img src={Queens} width="100" height="100" alt="" className="icon1" />
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={offset}
+        speed={1.7}
+        style={{ marginTop: "50px", marginLeft: "250px" }}
+      >
+        <img
+          src={StatenIsland}
+          width="100"
+          height="100"
+          alt=""
+          className="icon1"
+        />
       </ParallaxLayer>
 
       <ParallaxLayer
@@ -101,6 +125,32 @@ function IntroPage({ props, offset, color }) {
         <button className="button">
           {/* Brooklyn Button */}
           <div>BROOKLYN</div>
+        </button>
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={offset}
+        ref={parallax}
+        speed={1.3}
+        style={{ marginTop: "150px", marginLeft: "-100px" }}
+        onClick={handleScrollRight}
+      >
+        <button className="button">
+          {/* Brooklyn Button */}
+          <div>QUEENS</div>
+        </button>
+      </ParallaxLayer>
+
+      <ParallaxLayer
+        offset={offset}
+        ref={parallax}
+        speed={1.3}
+        style={{ marginTop: "150px", marginLeft: "105px" }}
+        onClick={handleScrollRight}
+      >
+        <button className="button">
+          {/* Brooklyn Button */}
+          <div>STATEN ISLAND</div>
         </button>
       </ParallaxLayer>
 

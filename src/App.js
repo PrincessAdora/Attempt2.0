@@ -21,10 +21,12 @@ import BrooklynGraph from "./components/BrooklynGraph";
 import Cards from "./components/Cards";
 import EndPage from "./components/EndPage";
 import "./search.css";
+import data from "./components/ListData";
+import search from "./search.js";
 
-//<a href="https://www.vecteezy.com/free-vector/city-perspective">City Perspective Vectors by Vecteezy</a>
-//<a href="https://www.vecteezy.com/free-vector/street">Street Vectors by Vecteezy</a>
-//<a href="https://www.vecteezy.com/free-vector/bridge">Bridge Vectors by Vecteezy</a>
+//https://icons8.com/icons/set/bridge
+//Ship icon by Icons8
+//Airport icon by Icons8
 
 class App extends Component {
   /* your return here to call what is shown on the page*/
@@ -61,12 +63,12 @@ class App extends Component {
       <div>
         <Parallax pages={7} className="container" horizontal>
           <IntroPage offset={0} color="light" />
-          <Page offset={1} color="light" />
-          <Page offset={2} color="mid" />
-          <Page offset={3} color="dark" />
-          <Page offset={4} color="darker" />
-          <Page offset={5} color="darker" />
-          <EndPage offset={6} color="light" />
+          <Page offset={1} color="mid" />
+          <Page offset={2} color="dark" />
+          <Page offset={3} color="darker" />
+          <Page offset={4} color="darkerer" />
+          <Page offset={5} color="darkest" />
+          <EndPage offset={6} color="deep" />
 
           <ParallaxLayer offset={6} speed={1.4}>
             <div className="card-scroll">
@@ -105,6 +107,9 @@ class App extends Component {
 
         {/* RESTAURANT DATA IS BELOW*/}
         <section className="list"></section>
+        <div className="tc bg-green ma0 pa4 min-vh-100">
+          <search details={data} />
+        </div>
       </div>
     );
   }

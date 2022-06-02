@@ -1,31 +1,63 @@
-import { React, useState } from "react";
-import TextField from "@mui/material/TextField";
-import List from "./components/List";
-import search from "./search.css";
+import React, { useState } from 'react';
+import Scroll from "./components/SRC";
+import SearchList from './components/SearchList';
 
-function Search() {
-  const [inputText, setInputText] = useState("");
-  let inputHandler = (e) => {
-    //convert input text to lower case
-    var lowerCase = e.target.value.toLowerCase();
-    setInputText(lowerCase);
+
+function Search({ details }) {
+
+  const [searchField, setSearchField] = useState("");
+  const [searchShow, setSearchShow] = useState(false); 
+
+  const filteredPersons = details.filter(
+    person => {
+      return (
+        person
+        .dba
+        .toLowerCase()
+        .includes(searchField.toLowerCase()) ||
+        person
+        .boro
+        .toLowerCase()
+        .includes(searchField.toLowerCase())
+      );
+    }
+  );
+
+  const handleChange = e => {
+    setSearchField(e.target.value);
+    if(e.target.value===""){
+      setSearchShow(false);
+    }
+    else {
+      setSearchShow(true);
+    }
   };
 
+  function searchList() {
+    if (searchShow) {
+      return (
+        <Scroll>
+          <SearchList filteredPersons={filteredPersons} />
+        </Scroll>
+      );
+    }
+  }
+
   return (
-    <div className="main">
-      <h1>Zipcode Search </h1>
-      <div className="search">
-        <TextField
-          id="outlined-basic"
-          onChange={inputHandler}
-          variant="outlined"
-          fullWidth
-          label="Search"
+    <section className="garamond">
+      <div className="navy georgia ma0 grow">
+        <h2 className="f2">Search your course</h2>
+      </div>
+      <div className="pa2">
+        <input 
+          className="pa3 bb br3 grow b--none bg-lightest-blue ma3"
+          type = "search" 
+          placeholder = "Search People" 
+          onChange = {handleChange}
         />
       </div>
-      <List input={inputText} datatwo={this.props.data} />
-      />
-    </div>
+      {searchList()}
+    </section>
   );
 }
 

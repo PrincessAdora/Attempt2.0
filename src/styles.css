@@ -60,7 +60,7 @@ body {
   text-align: left;
   font-family: "Concert One", cursive;
   font-size: 50px;
-  color: #626262;
+  color: #ffffff;
   font-weight: 900;
 }
 
@@ -71,7 +71,7 @@ body {
   text-align: left;
   font-family: "Concert One", cursive;
   font-size: 20px;
-  color: #626262;
+  color: #ffffff;
   font-weight: 900;
 }
 
@@ -83,8 +83,7 @@ body {
 }
 
 .light {
-  background: linear-gradient(to right, #fffde4, #7bc6cc);
-  /* background-image: url("Bronx.jpg"); */
+  background: linear-gradient(to right, #000428, #7bc6cc);
 }
 
 .mid {
@@ -97,6 +96,18 @@ body {
 
 .darker {
   background-image: linear-gradient(to right, #005aa7, #ff0099);
+}
+
+.darkerer {
+  background-image: linear-gradient(to right, #ff0099, #ef629f);
+}
+
+.darkest {
+  background-image: linear-gradient(to right, #ef629f, #ddd6f3);
+}
+
+.deep {
+  background-image: linear-gradient(to right, #ddd6f3, #3a1c71);
 }
 
 .button {
