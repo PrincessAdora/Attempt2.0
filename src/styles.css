@@ -110,17 +110,99 @@ body {
   background-image: linear-gradient(to right, #ddd6f3, #3a1c71);
 }
 
-.button {
+.button1 {
   background-color: #c095e3;
+  position: absolute;
   border-radius: 8px;
   color: white;
   padding: 10px 15px;
   text-decoration: none;
+  top: 735px;
+  right: 465px;
   margin-top: -100px;
   display: inline-block;
   border: none;
   outline: none;
   font-weight: 700;
+}
+.button2 {
+  background-color: #c095e3;
+  position: absolute;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  top: 735px;
+  right: 595px;
+  margin-top: -100px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+.button3 {
+  background-color: #c095e3;
+  position: absolute;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  top: 735px;
+  right: 755px;
+  margin-top: -100px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+.button4 {
+  background-color: #c095e3;
+  position: absolute;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  top: 450px;
+  right: 715px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+.button5 {
+  background-color: #c095e3;
+  position: absolute;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  top: 450px;
+  right: 480px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+.button6 {
+  background-color: #c095e3;
+  position: absolute;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  top: 300px;
+  right: 135px;
+  margin-top: -100px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-weight: 700;
+}
+
+.button7 {
+  position: absolute;
+  top: 435px;
+  right: 175px;
 }
 
 .card-scroll {

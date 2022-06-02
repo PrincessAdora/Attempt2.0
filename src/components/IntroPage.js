@@ -7,18 +7,17 @@ import Manhattan from "../images/manhattan.png";
 import Brooklyn from "../images/bridge.png";
 import Queens from "../images/Queens.png";
 import StatenIsland from "../images/Ship.png";
-import arrow from "../images/arrow.png";
 
 function IntroPage({ props, offset, color }) {
-  const parallax = useRef(null);
+  // // const parallax = useRef(null);
 
-  const Receiver = forwardRef((props, ref) => {
-    return <input ref={ref} {...props} />;
-  });
+  // // const Receiver = forwardRef((props, ref) => {
+  // //   return <input ref={ref} {...props} />;
+  // // });
 
-  const handleScrollRight = () => {
-    window.scrollTo({ left: 50, behavior: "smooth" });
-  };
+  // const handleScrollRight = () => {
+  //   window.scrollTo({ left: 50, behavior: "smooth" });
+  // };
 
   return (
     <>
@@ -92,97 +91,19 @@ function IntroPage({ props, offset, color }) {
 
       <ParallaxLayer
         offset={offset}
-        ref={parallax}
-        speed={1.2}
-        style={{ marginTop: "325px", marginLeft: "-150px" }}
-        onClick={handleScrollRight}
+        speed={2.3}
+        style={{ marginTop: "-280px" }}
       >
-        <button className="button">
-          {/* Bronx Button */}
-          <div>BRONX</div>
-        </button>
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={offset}
-        ref={parallax}
-        speed={1.25}
-        style={{ marginTop: "325px" }}
-        onClick={handleScrollRight}
-      >
-        <button className="button">
-          {/* Manhattan Button */}
-          <div>MANHATTAN</div>
-        </button>
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={offset}
-        ref={parallax}
-        speed={1.3}
-        style={{ marginTop: "325px", marginLeft: "150px" }}
-        onClick={handleScrollRight}
-      >
-        <button className="button">
-          {/* Brooklyn Button */}
-          <div>BROOKLYN</div>
-        </button>
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={offset}
-        ref={parallax}
-        speed={1.3}
-        style={{ marginTop: "150px", marginLeft: "-100px" }}
-        onClick={handleScrollRight}
-      >
-        <button className="button">
-          {/* Brooklyn Button */}
-          <div>QUEENS</div>
-        </button>
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={offset}
-        ref={parallax}
-        speed={1.3}
-        style={{ marginTop: "150px", marginLeft: "105px" }}
-        onClick={handleScrollRight}
-      >
-        <button className="button">
-          {/* Brooklyn Button */}
-          <div>STATEN ISLAND</div>
-        </button>
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={offset}
-        speed={1.7}
-        style={{ marginTop: "150px", marginLeft: "600px" }}
-      >
-        <img src={arrow} width="100" height="100" alt="" className="icon1" />
-      </ParallaxLayer>
-
-      <ParallaxLayer
-        offset={offset}
-        ref={parallax}
-        speed={1.3}
-        style={{ marginTop: "250px", marginLeft: "450px" }}
-        onClick={handleScrollRight}
-      >
-        <button className="button">
-          {/* Brooklyn Button */}
-          <div>INSPECT/SEARCH</div>
-        </button>
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={offset} speed={2} style={{ marginTop: "-280px" }}>
         <div>
           <p className="text">Restaurant Reviews</p>
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={offset} speed={2} style={{ marginTop: "-150px" }}>
+      <ParallaxLayer
+        offset={offset}
+        speed={2.3}
+        style={{ marginTop: "-150px" }}
+      >
         <div>
           <p className="par">
             Welcome to ResInspect. Click one of the buttons <br />

@@ -23,6 +23,7 @@ import EndPage from "./components/EndPage";
 import "./search.css";
 import data from "./components/ListData";
 import search from "./search.js";
+import arrow from "./images/arrow.png";
 
 //https://icons8.com/icons/set/bridge
 //Ship icon by Icons8
@@ -61,7 +62,12 @@ class App extends Component {
 
     return (
       <div>
-        <Parallax pages={7} className="container" horizontal>
+        <Parallax
+          pages={7}
+          ref={(ref) => (this.parallax = ref)}
+          className="container"
+          horizontal
+        >
           <IntroPage offset={0} color="light" />
           <Page offset={1} color="mid" />
           <Page offset={2} color="dark" />
@@ -69,6 +75,78 @@ class App extends Component {
           <Page offset={4} color="darkerer" />
           <Page offset={5} color="darkest" />
           <EndPage offset={6} color="deep" />
+
+          {/* BUTTONS */}
+          <ParallaxLayer offset={0} speed={1.7}>
+            <button
+              onClick={() => {
+                this.parallax.scrollTo(1);
+              }}
+              className="button1"
+            >
+              {/* Bronx Button */}
+              <div>BRONX</div>
+            </button>
+
+            <button
+              onClick={() => {
+                this.parallax.scrollTo(2);
+              }}
+              className="button2"
+            >
+              <div>MANHATTAN</div>
+            </button>
+
+            <button
+              onClick={() => {
+                this.parallax.scrollTo(3);
+              }}
+              className="button3"
+            >
+              <div>BROOKLYN</div>
+            </button>
+
+            <button
+              onClick={() => {
+                this.parallax.scrollTo(4);
+              }}
+              className="button4"
+            >
+              <div>QUEENS</div>
+            </button>
+
+            <button
+              onClick={() => {
+                this.parallax.scrollTo(5);
+              }}
+              className="button5"
+            >
+              <div>STATEN ISLAND</div>
+            </button>
+
+            <img
+              src={arrow}
+              width="100"
+              height="100"
+              alt=""
+              className="button7"
+              onClick={() => {
+                this.parallax.scrollTo(6);
+              }}
+            />
+
+            <button
+              style={{ marginTop: "250px", marginLeft: "450px" }}
+              onClick={() => {
+                this.parallax.scrollTo(6);
+              }}
+              className="button6"
+            >
+              <div>INSPECT/SEARCH</div>
+            </button>
+          </ParallaxLayer>
+
+          {/* CARDS */}
 
           <ParallaxLayer offset={6} speed={1.4}>
             <div className="card-scroll">
@@ -78,6 +156,8 @@ class App extends Component {
               ))}
             </div>
           </ParallaxLayer>
+
+          {/* GRAPHS */}
 
           <ParallaxLayer offset={1} speed={1.5}>
             <div className="text"> BRONX </div>
