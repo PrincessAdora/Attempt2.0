@@ -162,26 +162,61 @@ class App extends Component {
           <ParallaxLayer offset={1} speed={1.5}>
             <div className="text"> BRONX </div>
             <BronxGraph />
+            <div
+              style={{ marginLeft: "-365px", marginTop: "630px" }}
+              className="text"
+            >
+              {" "}
+              Grade{" "}
+            </div>
           </ParallaxLayer>
 
           <ParallaxLayer offset={2} speed={1.5}>
             <div className="text"> MANHATTAN </div>
             <ManhattanGraph />
+            <div
+              style={{ marginLeft: "-365px", marginTop: "630px" }}
+              className="text"
+            >
+              {" "}
+              Grade{" "}
+            </div>
           </ParallaxLayer>
 
           <ParallaxLayer offset={3} speed={1.5}>
             <div className="text"> BROOKLYN </div>
             <BrooklynGraph />
+            <div
+              style={{ marginLeft: "-365px", marginTop: "630px" }}
+              className="text"
+            >
+              {" "}
+              Grade{" "}
+            </div>
           </ParallaxLayer>
 
           <ParallaxLayer offset={4} speed={1.5}>
             <div className="text"> QUEENS </div>
             <QueensGraph />
+            <div
+              style={{ marginLeft: "-365px", marginTop: "630px" }}
+              className="text"
+            >
+              {" "}
+              Grade{" "}
+            </div>
           </ParallaxLayer>
 
           <ParallaxLayer offset={5} speed={1.5}>
             <div className="text"> STATEN ISLAND </div>
             <SIGraph />
+            <div
+              style={{ marginLeft: "-365px", marginTop: "630px" }}
+              className="text"
+            >
+              {" "}
+              Grade{" "}
+            </div>
           </ParallaxLayer>
         </Parallax>
 
