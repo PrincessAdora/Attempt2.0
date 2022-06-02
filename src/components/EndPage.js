@@ -18,9 +18,12 @@ function EndPage({ props, offset, color }) {
         <div className="background" />
       </ParallaxLayer>
 
-      {/* <ParallaxLayer offset={offset} speed={1}>
-        <div> <Search /> </div>
-      </ParallaxLayer> */}
+      <ParallaxLayer offset={offset} speed={1}>
+        <div>
+          {" "}
+          <Search />{" "}
+        </div>
+      </ParallaxLayer>
     </>
   );
 }

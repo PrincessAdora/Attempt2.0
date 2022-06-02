@@ -1,18 +1,13 @@
 import styles from "./styles.css";
-import React, { Component } from "react";
-import {
-  Parallax,
-  ParallaxLayer,
-  IParallax,
-  useSpring
-} from "@react-spring/parallax";
+import React, { Component, useState } from "react";
+import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+import { useSpring, animated } from "react-spring";
 import { BubbleChart } from "reaviz";
 import Navbar from "./components/NavBar";
 import Footer from "./components/footer";
 import IntroPage from "./components/IntroPage";
 import Page from "./components/Page";
 import { render } from "react-dom";
-import { useState } from "react";
 import BronxGraph from "./components/BronxGraph";
 import ManhattanGraph from "./components/ManhattanGraph";
 import QueensGraph from "./components/QueensGraph";
@@ -57,6 +52,14 @@ class App extends Component {
       });
   };
 
+  //https://stackoverflow.com/questions/55130413/animated-button-with-react-spring {
+  queryClicked = () => {
+    const [pressed, setPressed] = useState(false);
+    const { scale } = useSpring({ scale: clicked ? 0.8 : 1 });
+  };
+
+  // }
+
   render() {
     const { dataIsLoaded, data } = this.state;
 
@@ -78,15 +81,18 @@ class App extends Component {
 
           {/* BUTTONS */}
           <ParallaxLayer offset={0} speed={1.7}>
-            <button
+            <animated.button
+              //  onMouseDown={() => this.queryClicked.set(true)}
               onClick={() => {
                 this.parallax.scrollTo(1);
               }}
+              // onMouseUp={() => this.queryClicked.set(false)}
               className="button1"
+              // style={this.queryClicked.scale}
             >
               {/* Bronx Button */}
               <div>BRONX</div>
-            </button>
+            </animated.button>
 
             <button
               onClick={() => {
